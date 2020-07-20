@@ -43,7 +43,13 @@ $LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'W
 |                   |Basic|Full|Description|
 |-------------------|:---:|:--:|-----------|
 |Application Version|x    |x   |Version of WSLab Scripts |
-|Device model       |     |x   |Device model based on win32_xxx|
-|CPU Count          |     |x   |   |
+|Product type       |x    |x   |Workstation or Server|
+|Device Manufacturer|     |x   |Manufacturer (for example Lenovo, Dell, HP...)|
+|Device model       |     |x   |Device model based on win32_ComputerSystem|
+|Operating System   |     |x   |OS SKU and build (for example Windows 10 Enterprise (10.0.19041.388)|
 |Amount of RAM      |     |x   |   |
-|...                |x    |x   |   |
+|Number of Cores    |     |x   |   |
+|Disk Manufacturer  |     |x   |   |
+|Disk Model         |     |x   |   |
+|Disk MedyaType     |     |x   |   |
+|Disk Bustype       |     |x   |   |
