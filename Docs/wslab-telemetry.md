@@ -41,15 +41,40 @@ $LabConfig=@{ DomainAdminName='LabAdmin'; AdminPassword='LS1setup!'; Prefix = 'W
 ## Collected information
 
 |                   |Basic|Full|Description|
-|-------------------|:---:|:--:|-----------|
-|Application Version|x    |x   |Version of WSLab Scripts |
-|Product type       |x    |x   |Workstation or Server|
-|Device Manufacturer|     |x   |Manufacturer (for example Lenovo, Dell, HP...)|
-|Device model       |     |x   |Device model based on win32_ComputerSystem|
-|Operating System   |     |x   |OS SKU and build (for example Windows 10 Enterprise (10.0.19041.388)|
-|Amount of RAM      |     |x   |   |
-|Number of Cores    |     |x   |   |
-|Disk Manufacturer  |     |x   |   |
-|Disk Model         |     |x   |   |
-|Disk MedyaType     |     |x   |   |
-|Disk Bustype       |     |x   |   |
+|--------------------|:---:|:--:|-----------|
+
+|Application Version |x    |x   |Version of WSLab Scripts |
+|Product type        |x    |x   |Workstation or Server|
+|TelemetrySessionID  |x    |x   |Calculated based on MachineGUID, PSScriptRoot and ComputerName hash|
+|Device Manufacturer |     |x   |Manufacturer (for example Lenovo, Dell, HP...)|
+|Device model        |     |x   |Device model based on win32_ComputerSystem|
+|Operating System    |     |x   |OS SKU and build (for example Windows 10 Enterprise (10.0.19041.388)|
+|Amount of RAM       |     |x   |   |
+|Number of Cores     |     |x   |   |
+|Disk Manufacturer   |     |x   |   |
+|Disk Model          |     |x   |   |
+|Disk MedyaType      |     |x   |   |
+|Disk Bustype        |     |x   |   |
+|TotalDuration       |x    |x   |Duration of script run|
+|PowerShell Edition  |x    |x   |Desktop or core|
+|PowerShell Version  |x    |x   |   |
+
+
+### Specific to Deploy.ps1
+
+|                             |Basic|Full|Description|
+|-----------------------------|:---:|:--:|-----------|
+|VMDeploymentDuration         |x    |x   |Duration of Deploy.ps1 script|
+|Deployed VM OSBuild          |x    |x   |For example 19041|
+|Deployed VM InstallationType |x    |x   |For example Server Core|
+|Deployed VM OsVersion        |x    |x   |For example 10.0.17763.1282|
+|Deployed VM EditionID        |x    |x   |For example ServerDatacenter|
+
+### Specific to Cleanup.ps1
+
+|           |Basic|Full|Description|
+|-----------|:---:|:--:|-----------|
+|VmsRemoved	|x    |x   |Number of removed VMs|
+
+
+
